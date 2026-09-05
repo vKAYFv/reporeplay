@@ -1,0 +1,42 @@
+<svg width="1200" height="220" viewBox="0 0 1200 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">How RepoReplay works</title>
+  <desc id="desc">A Git repository flows through local RepoReplay analysis into a portable standalone HTML report.</desc>
+  <defs>
+    <linearGradient id="line" x1="90" y1="0" x2="1110" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#79A7FF"/><stop offset="0.5" stop-color="#B8FF5C"/><stop offset="1" stop-color="#B995FF"/></linearGradient>
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
+  </defs>
+  <rect width="1200" height="220" rx="22" fill="#0A0B0F"/>
+  <rect x="0.75" y="0.75" width="1198.5" height="218.5" rx="21.25" stroke="#303542" stroke-width="1.5"/>
+  <path d="M300 110H448M752 110H900" stroke="url(#line)" stroke-width="10" opacity="0.14" filter="url(#glow)"/>
+  <path d="M300 110H448M752 110H900" stroke="url(#line)" stroke-width="1.5" stroke-dasharray="5 7"/>
+  <path d="M438 103L448 110L438 117M890 103L900 110L890 117" stroke="#B8FF5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <g transform="translate(54 45)">
+      <rect width="246" height="130" rx="16" fill="#111319" stroke="#252936"/>
+      <rect x="18" y="18" width="38" height="38" rx="10" fill="#171A22" stroke="#303542"/>
+      <path d="M31 29V45M31 32C36 32 36 27 41 27M31 40C36 40 36 45 41 45" stroke="#79A7FF" stroke-width="2" stroke-linecap="round"/><circle cx="31" cy="27" r="2.5" fill="#79A7FF"/><circle cx="43" cy="27" r="2.5" fill="#79A7FF"/><circle cx="43" cy="45" r="2.5" fill="#79A7FF"/>
+      <text x="18" y="82" fill="#F4F5F7" font-size="15" font-weight="700">Your repository</text>
+      <text x="18" y="105" fill="#969DAC" font-size="12">Commits · tags · file changes</text>
+    </g>
+
+    <g transform="translate(448 30)">
+      <rect width="304" height="160" rx="18" fill="#111319" stroke="#B8FF5C" stroke-opacity="0.42"/>
+      <rect x="20" y="20" width="42" height="42" rx="11" fill="#1A2115" stroke="#3C5723"/>
+      <path d="M32 34.5H45C48.31 34.5 51 37.19 51 40.5V51M32 34.5L37 29.5M32 34.5L37 39.5M54 48.5H41C37.69 48.5 35 45.81 35 42.5V34" stroke="#B8FF5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="78" y="39" fill="#B8FF5C" font-size="10" font-weight="700" letter-spacing="1.4">RUNS LOCALLY</text>
+      <text x="78" y="59" fill="#F4F5F7" font-size="16" font-weight="750">RepoReplay</text>
+      <text x="20" y="102" fill="#969DAC" font-size="12">Reads Git facts and calculates</text>
+      <text x="20" y="122" fill="#969DAC" font-size="12">deterministic repository metrics.</text>
+      <text x="20" y="145" fill="#626A7A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">No upload · No API · No database</text>
+    </g>
+
+    <g transform="translate(900 45)">
+      <rect width="246" height="130" rx="16" fill="#111319" stroke="#252936"/>
+      <rect x="18" y="18" width="38" height="38" rx="10" fill="#171A22" stroke="#303542"/>
+      <path d="M30 28H44L50 34V48H30V28Z" stroke="#B995FF" stroke-width="1.8" stroke-linejoin="round"/><path d="M44 28V34H50" stroke="#B995FF" stroke-width="1.8" stroke-linejoin="round"/><path d="M34 43L38 39L42 42L46 36" stroke="#B995FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="18" y="82" fill="#F4F5F7" font-size="15" font-weight="700">One HTML story</text>
+      <text x="18" y="105" fill="#969DAC" font-size="12">Interactive · portable · shareable</text>
+    </g>
+  </g>
+</svg>

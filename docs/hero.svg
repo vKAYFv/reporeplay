@@ -1,0 +1,80 @@
+<svg width="1280" height="420" viewBox="0 0 1280 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">RepoReplay — Your Git history, replayed</title>
+  <desc id="desc">Dark product banner with a bright green repository timeline and a miniature analytics dashboard.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1280" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A0B0F"/>
+      <stop offset="1" stop-color="#11141B"/>
+    </linearGradient>
+    <linearGradient id="chartFill" x1="0" y1="140" x2="0" y2="328" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B8FF5C" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#B8FF5C" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(1084 112) rotate(127.5) scale(365 450)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B8FF5C" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#B8FF5C" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-60" y="-60" width="670" height="420" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.38"/>
+    </filter>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" stroke="#252936" stroke-opacity="0.46"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="420" rx="28" fill="url(#background)"/>
+  <rect width="1280" height="420" rx="28" fill="url(#grid)" opacity="0.5"/>
+  <rect width="1280" height="420" rx="28" fill="url(#glow)"/>
+  <rect x="0.75" y="0.75" width="1278.5" height="418.5" rx="27.25" stroke="#303542" stroke-width="1.5"/>
+
+  <g transform="translate(70 62)">
+    <rect width="42" height="42" rx="12" fill="#151820" stroke="#303542"/>
+    <path d="M12 14.5H25.5C29.09 14.5 32 17.41 32 21V32M12 14.5L17 9.5M12 14.5L17 19.5M34 29.5H20.5C16.91 29.5 14 26.59 14 23V14" stroke="#B8FF5C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="57" y="28" fill="#F4F5F7" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="21" font-weight="750" letter-spacing="-0.5">RepoReplay</text>
+  </g>
+
+  <g transform="translate(70 145)">
+    <text fill="#B8FF5C" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" font-weight="700" letter-spacing="2.4">LOCAL-FIRST GIT ANALYTICS</text>
+    <text y="66" fill="#F4F5F7" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="48" font-weight="780" letter-spacing="-2.2">Your Git history,</text>
+    <text y="120" fill="#969DAC" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="48" font-weight="780" letter-spacing="-2.2">replayed.</text>
+    <text y="166" fill="#969DAC" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16">Turn any repository into one beautiful, interactive HTML story.</text>
+    <g transform="translate(0 202)" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1.1">
+      <rect width="112" height="30" rx="15" fill="#171A22" stroke="#303542"/><text x="17" y="19" fill="#F4F5F7">ONE COMMAND</text>
+      <rect x="122" width="92" height="30" rx="15" fill="#171A22" stroke="#303542"/><text x="140" y="19" fill="#F4F5F7">ONE FILE</text>
+      <rect x="224" width="111" height="30" rx="15" fill="#171A22" stroke="#303542"/><text x="240" y="19" fill="#F4F5F7">NO ACCOUNT</text>
+    </g>
+  </g>
+
+  <g filter="url(#shadow)" transform="translate(620 68)">
+    <rect width="550" height="300" rx="20" fill="#111319" stroke="#303542"/>
+    <circle cx="28" cy="26" r="4" fill="#FF7B72"/><circle cx="42" cy="26" r="4" fill="#F7C65F"/><circle cx="56" cy="26" r="4" fill="#B8FF5C"/>
+    <text x="274" y="30" text-anchor="middle" fill="#626A7A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">northstar · main</text>
+    <line x1="0" y1="50" x2="550" y2="50" stroke="#252936"/>
+
+    <g transform="translate(24 72)" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+      <rect width="115" height="64" rx="10" fill="#171A22" stroke="#252936"/>
+      <text x="13" y="19" fill="#626A7A" font-size="8" font-weight="700" letter-spacing="1.2">COMMITS</text>
+      <text x="13" y="48" fill="#F4F5F7" font-size="25" font-weight="760">1,284</text>
+      <rect x="125" width="115" height="64" rx="10" fill="#171A22" stroke="#252936"/>
+      <text x="138" y="19" fill="#626A7A" font-size="8" font-weight="700" letter-spacing="1.2">PEOPLE</text>
+      <text x="138" y="48" fill="#F4F5F7" font-size="25" font-weight="760">24</text>
+      <rect x="250" width="115" height="64" rx="10" fill="#171A22" stroke="#252936"/>
+      <text x="263" y="19" fill="#626A7A" font-size="8" font-weight="700" letter-spacing="1.2">LINES MOVED</text>
+      <text x="263" y="48" fill="#F4F5F7" font-size="25" font-weight="760">81.3K</text>
+      <rect x="375" width="127" height="64" rx="10" fill="#171A22" stroke="#252936"/>
+      <text x="388" y="19" fill="#626A7A" font-size="8" font-weight="700" letter-spacing="1.2">MILESTONES</text>
+      <text x="388" y="48" fill="#F4F5F7" font-size="25" font-weight="760">18</text>
+    </g>
+
+    <g transform="translate(24 158)">
+      <text fill="#626A7A" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="8" font-weight="700" letter-spacing="1.2">VELOCITY</text>
+      <text y="22" fill="#F4F5F7" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13" font-weight="700">Change over time</text>
+      <path d="M0 110L0 94L40 80L80 92L120 54L160 71L200 37L240 69L280 21L320 57L360 44L400 76L440 33L502 56L502 110H0Z" fill="url(#chartFill)"/>
+      <path d="M0 94L40 80L80 92L120 54L160 71L200 37L240 69L280 21L320 57L360 44L400 76L440 33L502 56" stroke="#B8FF5C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M0 110H502" stroke="#252936"/>
+      <g fill="#111319" stroke="#B8FF5C" stroke-width="1.8">
+        <circle cx="0" cy="94" r="3"/><circle cx="40" cy="80" r="3"/><circle cx="80" cy="92" r="3"/><circle cx="120" cy="54" r="3"/><circle cx="160" cy="71" r="3"/><circle cx="200" cy="37" r="3"/><circle cx="240" cy="69" r="3"/><circle cx="280" cy="21" r="3"/><circle cx="320" cy="57" r="3"/><circle cx="360" cy="44" r="3"/><circle cx="400" cy="76" r="3"/><circle cx="440" cy="33" r="3"/><circle cx="502" cy="56" r="3"/>
+      </g>
+    </g>
+  </g>
+</svg>
