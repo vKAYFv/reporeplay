@@ -1,0 +1,95 @@
+name: kayf-profile-counter
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/server.Dockerfile
+      target: production
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      PORT: 3000
+      HOST: 0.0.0.0
+      REDIS_URL: redis://redis:6379
+      COUNT_MODE: ${COUNT_MODE:-unique}
+      COUNT_BOTS: ${COUNT_BOTS:-false}
+      UNIQUE_VIEW_TTL_SECONDS: ${UNIQUE_VIEW_TTL_SECONDS:-86400}
+      VIEW_COOLDOWN_SECONDS: ${VIEW_COOLDOWN_SECONDS:-300}
+      UNIQUE_HASH_SECRET: ${UNIQUE_HASH_SECRET:-local-development-secret-change-me}
+      RATE_LIMIT_ENABLED: ${RATE_LIMIT_ENABLED:-true}
+      RATE_LIMIT_PER_IP_PER_MINUTE: ${RATE_LIMIT_PER_IP_PER_MINUTE:-100}
+      RATE_LIMIT_GLOBAL_PER_MINUTE: ${RATE_LIMIT_GLOBAL_PER_MINUTE:-10000}
+      ADMIN_API_KEY: ${ADMIN_API_KEY:-local-admin-key-change-me}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      ALLOW_TEST_VISITOR_HEADER: ${ALLOW_TEST_VISITOR_HEADER:-false}
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"
+        ]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+    init: true
+
+  redis:
+    image: redis:7.4-alpine
+    command:
+      - redis-server
+      - --appendonly
+      - "yes"
+      - --appendfsync
+      - everysec
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  loadtest:
+    profiles: ["loadtest"]
+    build:
+      context: .
+      dockerfile: docker/k6.Dockerfile
+    environment:
+      TARGET_URL: ${TARGET_URL:-http://app:3000}
+      SCENARIO: ${SCENARIO:-100k}
+      TOTAL_REQUESTS: ${TOTAL_REQUESTS:-100000}
+      VUS: ${VUS:-100}
+      ALLOW_REMOTE_TARGET: ${ALLOW_REMOTE_TARGET:-false}
+    depends_on:
+      app:
+        condition: service_healthy
+    restart: "no"
+
+  test:
+    profiles: ["test"]
+    build:
+      context: .
+      dockerfile: docker/server.Dockerfile
+      target: build
+    command: ["pnpm", "test"]
+    environment:
+      TEST_REDIS_URL: redis://redis:6379
+      UNIQUE_HASH_SECRET: integration-test-secret
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: "no"
+
+volumes:
+  redis-data:
+    name: kayf-profile-counter-redis-data
